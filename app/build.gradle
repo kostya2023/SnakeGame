@@ -1,0 +1,27 @@
+// app/build.gradle
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33 // Убедитесь, что у вас установлена эта версия SDK
+
+    defaultConfig {
+        applicationId "com.kostya.snakegame"
+        minSdkVersion 21 // Минимальная версия Android
+        targetSdkVersion 33 // Целевая версия Android
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Зависимость для поддержки ActionBar и других компонентов
+    implementation 'androidx.core:core-ktx:1.10.1' // Зависимость для работы с Kotlin
+    // Добавьте другие зависимости, если они у вас есть
+}

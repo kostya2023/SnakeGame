@@ -1,0 +1,7 @@
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="app_name">Snake Game</string>
+    <string name="restart">Restart</string>
+    <string name="score">Score: %1$d</string>
+    <string name="high_score">High Score: %1$d</string>
+</resources>

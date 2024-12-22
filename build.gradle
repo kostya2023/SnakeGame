@@ -1,0 +1,23 @@
+// build.gradle (корень проекта)
+buildscript {
+    ext.kotlin_version = '1.7.10' // Укажите версию Kotlin, если используете его
+    repositories {
+        google() // Репозиторий Google для Android
+        mavenCentral() // Центральный репозиторий Maven
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0' // Плагин Android Gradle
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Плагин Kotlin, если нужно
+    }
+}
+
+allprojects {
+    repositories {
+        google() // Репозиторий Google
+        mavenCentral() // Центральный репозиторий Maven
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir // Задача для очистки сборочного каталога
+}
